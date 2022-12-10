@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <title>PRODUCTS TABLE</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+            <th>PRODUCT</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+            </tr>
+
+        <div>
+            <tr>
+            <td>Rice</td>
+            <td> <input type="number" id="riceprice" placeholder="100" value="100" readonly> </td>
+            <td> <input type="number" id="ricequantity" placeholder="1" value="" min="1"> </td>
+            <td> <input type="number" id="ricetotal" value="" placeholder="100" readonly> </td>
+            <td> <span class="equal" onclick="riceresult()">View Price</span> </td>
+            </tr>
+        </div>
+
+        <div>
+            <tr>
+            <td>Maize</td>
+            <td> <input type="number" id="maizeprice" placeholder="50" value="100" readonly> </td>
+            <td> <input type="number" id="maizequantity" placeholder="1" value=""> </td>
+            <td> <input type="number" id="maizetotal" value="" placeholder="100" readonly> </td>
+            <td> <span class="equal" onclick="maizeresult()">View Price</span> </td>
+            </tr>
+        </div>
+
+        </table>
+
+        <p><b>Total</b> :: 
+    </div>
+      
+      
+      
+
+</body>
+</html>
+
+
+
+<script>
+    
+    var ricep=document.getElementById("riceprice");
+    var riceq=document.getElementById("ricequantity");
+    var ricet=document.getElementById("ricetotal");
+    
+        ricep.value=100;
+        riceq.value=("1");
+
+
+    // let riceprice = "ricep.value";
+    // let ricequantity = "riceq.value";
+
+    // ricet.value=riceq.value * ricep.value;
+
+    // document.getElementById("ricequantity").value = "vx";
+    
+        function riceresult() {
+            document.getElementById("ricetotal").value = [riceq.value * ricep.value];
+        };
+
+
+
+    var maizep=document.getElementById("maizeprice");
+    var maizeq=document.getElementById("maizequantity");
+    var maizet=document.getElementById("maizetotal");
+    
+        maizep.value=50;
+        maizeq.value=("1");
+
+    
+function maizeresult() {
+        document.getElementById("maizetotal").value = [maizeq.value * maizep.value];
+    }
+
+</script>
