@@ -40,7 +40,7 @@
 
         </table>
 
-        <p><b>Total</b> :: 
+        <p><b>Total</b> :: <span class="equal" id="totalresult" onclick="totalresult()">View Price <p></p> </span>
     </div>
       
       
@@ -85,5 +85,18 @@
 function maizeresult() {
         document.getElementById("maizetotal").value = [maizeq.value * maizep.value];
     }
+
+
+    ricet.value = [riceq.value] * [ricep.value];
+    maizet.value = [maizeq.value] * [maizep.value];
+
+
+let x = maizet.value + ricet.value;
+
+function totalresult() {
+    document.getElementById("totalresult").innerText = x;
+}
+
+
 
 </script>
