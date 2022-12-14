@@ -1,6 +1,55 @@
 table, th, td {
     border:1px solid black;
-  }
+}
+
+table {
+  background-color: #ffffff;
+}
+
+table th {
+  background-color: bisque;
+  color: #000000;
+  padding: 10px 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #69520b;
+  color: #ffffff;
+}
+
+tr:nth-child(odd) {
+  background-color: bisque;
+}
+
+
+.tables {
+  position: relative;
+  padding: 80px 50px;
+  width: 80%;
+  background-color: #f1f1f1;
+}
+
+table {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.even>td>input {
+  color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+}
 
 
 .equal {

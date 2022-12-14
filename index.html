@@ -9,34 +9,31 @@
     <title>PRODUCTS TABLE</title>
 </head>
 <body>
-    <div>
+    <div class="tables">
         <table>
             <tr>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <th>TOTAL</th>
+                <th>PRODUCT</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+                <th>PRICE CHECKER</th>
             </tr>
 
-        <div>
-            <tr>
-            <td>Rice</td>
-            <td> <input type="number" id="riceprice" placeholder="100" value="100" readonly> </td>
-            <td> <input type="number" id="ricequantity" placeholder="1" value="" min="1"> </td>
-            <td> <input type="number" id="ricetotal" value="" placeholder="100" readonly> </td>
-            <td> <span class="equal" onclick="riceresult()">View Price</span> </td>
+            <tr class="even">
+                <td>Rice</td>
+                <td> <input type="number" id="riceprice" placeholder="100" value="100" readonly> </td>
+                <td> <input type="number" id="ricequantity" placeholder="1" value="1" min="1"> </td>
+                <td> <input type="number" id="ricetotal" value="" placeholder="100" readonly> </td>
+                <td> <span class="equal" onclick="riceresult()">View Price</span> </td>
             </tr>
-        </div>
 
-        <div>
             <tr>
-            <td>Maize</td>
-            <td> <input type="number" id="maizeprice" placeholder="50" value="100" readonly> </td>
-            <td> <input type="number" id="maizequantity" placeholder="1" value=""> </td>
-            <td> <input type="number" id="maizetotal" value="" placeholder="100" readonly> </td>
-            <td> <span class="equal" onclick="maizeresult()">View Price</span> </td>
+                <td>Maize</td>
+                <td> <input type="number" id="maizeprice" placeholder="50" value="50" readonly> </td>
+                <td> <input type="number" id="maizequantity" placeholder="1" value="1"> </td>
+                <td> <input type="number" id="maizetotal" value="" placeholder="50" readonly> </td>
+                <td> <span class="equal" onclick="maizeresult()">View Price</span> </td>
             </tr>
-        </div>
 
         </table>
 
@@ -57,8 +54,8 @@
     var riceq=document.getElementById("ricequantity");
     var ricet=document.getElementById("ricetotal");
     
-        ricep.value=100;
-        riceq.value=("1");
+        // ricep.value=100;
+        // riceq.value="1";
 
 
     // let riceprice = "ricep.value";
@@ -69,7 +66,7 @@
     // document.getElementById("ricequantity").value = "vx";
     
         function riceresult() {
-            document.getElementById("ricetotal").value = [riceq.value * ricep.value];
+            document.getElementById("ricetotal").value = riceq.value * ricep.value;
         };
 
 
@@ -78,24 +75,28 @@
     var maizeq=document.getElementById("maizequantity");
     var maizet=document.getElementById("maizetotal");
     
-        maizep.value=50;
-        maizeq.value=("1");
+        // maizep.value=50;
+        // maizeq.value="1";
 
     
 function maizeresult() {
-        document.getElementById("maizetotal").value = [maizeq.value * maizep.value];
+        document.getElementById("maizetotal").value = maizeq.value * maizep.value;
     }
 
 
-    ricet.value = [riceq.value] * [ricep.value];
-    maizet.value = [maizeq.value] * [maizep.value];
+    ricet.value = [Number(riceq.value)] * [Number(ricep.value)];
+    maizet.value = [Number(maizeq.value)] * [Number(maizep.value)];
 
 
-let x = maizet.value + ricet.value;
+let x = Number(maizet.value) + Number(ricet.value);
 
 function totalresult() {
     document.getElementById("totalresult").innerText = x;
 }
+
+
+
+        // var mtv=document.getElementById(maizetotal).value = xmtx;
 
 
 
